@@ -13,7 +13,7 @@ export function App() {
         </main>
         <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-4 px-6 text-sm text-gray-500 dark:text-gray-400 transition-colors duration-200">
           <div className="container mx-auto flex justify-between items-center">
-            <p>© 2023 SENATI. Todos los derechos reservados.</p>
+            <p>© 2025 SENATI. Todos los derechos reservados.</p>
             <p>Versión 9.0</p>
           </div>
         </footer>

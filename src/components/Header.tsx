@@ -10,9 +10,8 @@ export function Header() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
           <div className="mr-4">
-            <img src="/image.png" alt="SENATI Logo" className="h-8 w-auto" />
+            <img src="https://campusonline.senati.edu.pe/assets/images/logo-horizontal-blanco-web.fw-455x128.png" alt="SENATI Logo" className="h-8 w-auto" />
           </div>
-          <h1 className="text-xl font-bold hidden md:block">SENATI</h1>
         </div>
         <div className="flex items-center space-x-4">
           <div className="relative hidden md:block">
