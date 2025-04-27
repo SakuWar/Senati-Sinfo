@@ -39,7 +39,7 @@ export function Header() {
             <span className="font-medium text-white">
               DIEGO M. CHUQUIRUNA ABANTO
             </span>
-            , te da la bienvenida.
+            , te damos la bienvenida.
           </p>
         </div>
       </div>
