@@ -1,6 +1,11 @@
 import React from 'react';
 import { CalendarIcon, GraduationCapIcon, CreditCardIcon, BookOpenIcon } from 'lucide-react';
-export function QuickActions() {
+
+interface QuickActionsProps {
+  onActionClick?: (actionLabel: string) => void;
+}
+
+export function QuickActions({ onActionClick }: QuickActionsProps) {
   const actions = [{
     icon: <CalendarIcon className="h-5 w-5" />,
     label: 'Horario',
@@ -18,8 +23,9 @@ export function QuickActions() {
     label: 'Cursos',
     color: 'bg-orange-100 text-orange-600'
   }];
+  
   return <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-      {actions.map((action, index) => <button key={index} className="flex flex-col items-center p-4 rounded-lg transition-all duration-200 hover:transform hover:scale-105">
+      {actions.map((action, index) => <button key={index} onClick={() => onActionClick?.(action.label)}className="flex flex-col items-center p-4 rounded-lg transition-all duration-200 hover:transform hover:scale-105">
           <div className={`p-3 rounded-full ${action.color} mb-2`}>
             {action.icon}
           </div>

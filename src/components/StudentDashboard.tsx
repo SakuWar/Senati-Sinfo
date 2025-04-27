@@ -1,8 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
 import { ServiceCard } from './ServiceCard';
 import { QuickActions } from './QuickActions';
+import { ScheduleInterface } from './ScheduleInterface'; // <-- Ruta correcta
 import { CalendarIcon, GraduationCapIcon, UserIcon, CreditCardIcon, TicketIcon, BookOpenIcon, CameraIcon, FileTextIcon, UploadIcon } from 'lucide-react';
+
 export function StudentDashboard() {
+
+  const [showSchedule, setShowSchedule] = useState(false);
+
   return <div className="container mx-auto">
       <div className="mb-8">
         <h2 className="text-xl font-medium text-gray-800 mb-2">
@@ -11,8 +17,11 @@ export function StudentDashboard() {
         <p className="text-sm text-gray-600 mb-4">
           Servicios más utilizados por los estudiantes
         </p>
-        <QuickActions />
+        <QuickActions onActionClick={(action) => action === 'Horario' && setShowSchedule(true)} />
       </div>
+
+      {showSchedule && ( <ScheduleInterface onClose={() => setShowSchedule(false)} /> )}
+
       <div className="mb-8">
         <h2 className="text-xl font-medium text-gray-800 mb-2">
           Panel de Servicios
